@@ -1,11 +1,18 @@
 use bevy::prelude::*;
 
+pub struct HelloGnoemPlugin;
+
 fn main() {
     App::new()
-        .add_plugins(DefaultPlugins)
-        .add_systems(Startup, add_gnoems)
-        .add_systems(Update, greet_gnoems)
+        .add_plugins((DefaultPlugins, HelloGnoemPlugin))
         .run();
+}
+
+impl Plugin for HelloGnoemPlugin {
+    fn build(&self, app: &mut App) {
+        app.add_systems(Startup, add_gnoems)
+            .add_systems(Update, greet_gnoems);
+    }
 }
 
 fn add_gnoems(mut commands: Commands) {
