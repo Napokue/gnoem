@@ -1,10 +1,10 @@
 # Project Outline
 
 ## What is Gnoem?
-Gnoem is a simulation, that simulates entities called Gnoems and tries to this world with natural selection, procedural generation (for environments but for entities as well), and GOAP (Goal Oriented Action Planning) in combination with Neural Networks.
+Gnoem is an experimental simulation designed for research and learning purposes. It aims to create a progressively complex environment by simulating Gnoems—tiny beings influenced by natural selection, procedural generation, GOAP (Goal Oriented Action Planning), and Neural Networks. As an observer, you will witness the evolution of the Gnoem world, providing insights into the intersection of technology and the natural world.
 
 ## What is the goal for Gnoem?
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMzIxMzk2N119
+eyJoaXN0b3J5IjpbMTg5ODYzMjkzOF19
 -->
