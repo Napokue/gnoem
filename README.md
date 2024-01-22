@@ -6,3 +6,6 @@ In Gnoem, you won't play a traditional game, but rather, you'll immerse yourself
 Beyond the charming facade lies a deeper purpose. Gnoem is not just about whimsy; it's a platform for exploring concepts such as natural selection, procedural generation (both for the environment and the gnomes), and the implementation of a neural network. Watch as the gnomes adapt and learn from their mistakes through successive generations, providing a fascinating insight into the intersection of technology and the natural world.
 
 Embark on this enlightening journey with Gnoem, where the simulation becomes a canvas for understanding, experimentation, and the extraordinary dance of life in a small, intricately crafted world.
+
+# Project Outline
+Please see [Project Outline](<docs/Project Outline.md>).
