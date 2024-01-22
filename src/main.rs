@@ -1,3 +1,4 @@
+use bevy::input::mouse::MouseWheel;
 use bevy::prelude::*;
 use bevy::render::camera::ScalingMode;
 
@@ -7,7 +8,7 @@ fn main() {
     App::new()
         .add_plugins((DefaultPlugins, HelloGnoemPlugin))
         .add_systems(Startup, setup)
-        .add_systems(Update, camera_movement)
+        .add_systems(Update, (move_camera, zoom_camera))
         .run();
 }
 
@@ -42,7 +43,7 @@ fn setup(
     commands.spawn(Camera3dBundle {
         projection: OrthographicProjection {
             scale: 3.0,
-            scaling_mode: ScalingMode::FixedVertical(2.0),
+            scaling_mode: ScalingMode::FixedVertical(3.0),
             ..default()
         }
         .into(),
@@ -51,7 +52,21 @@ fn setup(
     });
 }
 
-fn camera_movement(
+fn zoom_camera(
+    mut mouse_wheel_events: EventReader<MouseWheel>,
+    mut query: Query<&mut Projection, With<Camera>>,
+) {
+    for mouse_wheel in mouse_wheel_events.read() {
+        if let Ok(mut projection) = query.get_single_mut() {
+            if let Projection::Orthographic(ref mut orthographic) = *projection {
+                orthographic.scale -= mouse_wheel.y * 0.1;
+                orthographic.scale = orthographic.scale.clamp(0.5, 10.);
+            }
+        }
+    }
+}
+
+fn move_camera(
     keyboard_input: Res<Input<KeyCode>>,
     mut query: Query<&mut Transform, With<Camera>>,
 ) {
