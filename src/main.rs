@@ -7,6 +7,7 @@ fn main() {
     App::new()
         .add_plugins((DefaultPlugins, HelloGnoemPlugin))
         .add_systems(Startup, setup)
+        .add_systems(Update, camera_movement)
         .run();
 }
 
@@ -48,6 +49,27 @@ fn setup(
         transform: Transform::from_xyz(-2.5, 4.5, 9.0).looking_at(Vec3::ZERO, Vec3::Y),
         ..default()
     });
+}
+
+fn camera_movement(
+    keyboard_input: Res<Input<KeyCode>>,
+    mut query: Query<&mut Transform, With<Camera>>,
+) {
+    let mut transform = query.single_mut();
+
+    // Adjust camera position based on keyboard input
+    if keyboard_input.pressed(KeyCode::W) {
+        transform.translation.z -= 0.1;
+    }
+    if keyboard_input.pressed(KeyCode::S) {
+        transform.translation.z += 0.1;
+    }
+    if keyboard_input.pressed(KeyCode::A) {
+        transform.translation.x -= 0.1;
+    }
+    if keyboard_input.pressed(KeyCode::D) {
+        transform.translation.x += 0.1;
+    }
 }
 
 impl Plugin for HelloGnoemPlugin {
