@@ -10,8 +10,8 @@ The primary aim of Gnoem is to venture into unexplored territories of technologi
 I'm driven by the desire to create a go-to project for experimentation—a canvas where I can delve into various ideas at my own pace. This project holds a special place as a playground for exploring my interest in graphics and procedural generation. The goal is to have a dedicated space for continuous experimentation and discovery within these domains.
 
 ## Project Scope
-It is up to my and maybe others their imagination what the scope of this project will become. As of this writing, the project scope will be small and be split in multiple small milestones to get started. When there is a product that can a
+It is up to my and maybe others their imagination what the scope of this project will become. As of this writing, the project scope will be small and be split in multiple small milestones to get started. When there is a product that can actually be run, this section will probably be rewritten.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTUxNDE5MzQsMTg5ODYzMjkzOF19
+eyJoaXN0b3J5IjpbLTE4NjY2MTE2NjMsMTg5ODYzMjkzOF19
 -->
