@@ -1,4 +1,4 @@
-# gnoem
+# Gnoem
 Welcome to Gnoem, a captivating simulation that takes you into a little world inhabited by even littler beings. Inspired by a playful mispronunciation, Gnoem invites you to observe and delve into the intricacies of a tiny universe where the focus is on learning and discovery.
 
 In Gnoem, you won't play a traditional game, but rather, you'll immerse yourself in a simulated environment. Your role is that of an observer, able to inspect and follow the daily lives of the gnomes as they navigate their miniature world. The catchphrase, "A little world, with little beings," perfectly encapsulates the essence of this project, emphasizing the minute details that make Gnoem unique.
@@ -9,3 +9,6 @@ Embark on this enlightening journey with Gnoem, where the simulation becomes a c
 
 # Project Outline
 Please see [Project Outline](<docs/Project Outline.md>).
+
+# Technology Stack
+* [Bevy](https://github.com/bevyengine/bevy) game engine for the simulation environment.
