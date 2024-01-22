@@ -12,6 +12,9 @@ I'm driven by the desire to create a go-to project for experimentation—a canva
 ## Project Scope
 It is up to my and maybe others their imagination what the scope of this project will become. As of this writing, the project scope will be small and be split in multiple small milestones to get started. When there is a product that can actually be run, this section will probably be rewritten.
 
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjY2MTE2NjMsMTg5ODYzMjkzOF19
+eyJoaXN0b3J5IjpbODczNDM0MjUzLC0xODY2NjExNjYzLDE4OT
+g2MzI5MzhdfQ==
 -->
