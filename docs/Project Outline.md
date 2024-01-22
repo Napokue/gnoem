@@ -7,7 +7,7 @@ Gnoem is an experimental simulation designed for research and learning purposes.
 The primary aim of Gnoem is to venture into unexplored territories of technologies and algorithms. As an experimental project, it anticipates encountering challenges like hiccups, performance bottlenecks, and necessary refactors. However, the overarching purpose remains rooted in enjoying the creative process and the learning journey. The delight comes not only from overcoming obstacles but also from the joy of witnessing little Gnoems meandering across the screen, bringing the simulation to life.
 
 ## Motivation for writing Gnoem
-My motivation is that I want to have one project I can return to when I want to experiment with things. I have a keen interest in Graphics
+I'm driven by the desire to create a go-to project for experimentation—a canvas where I can delve into various ideas at my own pace. This project holds a special place as a playground for exploring my interest in graphics and procedural generation. The goal is to have a dedicated space for continuous experimentation and discovery within these domains.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUxNDAzODMxLDE4OTg2MzI5MzhdfQ==
+eyJoaXN0b3J5IjpbLTU3Nzk0ODQzMywxODk4NjMyOTM4XX0=
 -->
