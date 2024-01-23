@@ -3,15 +3,9 @@ mod camera_system;
 use bevy::prelude::*;
 use bevy::render::camera::ScalingMode;
 
-pub struct HelloGnoemPlugin;
-
 fn main() {
     App::new()
-        .add_plugins((
-            DefaultPlugins,
-            HelloGnoemPlugin,
-            camera_system::build_plugins(),
-        ))
+        .add_plugins((DefaultPlugins, camera_system::build_plugins()))
         .add_systems(Startup, setup)
         .run();
 }
@@ -55,28 +49,3 @@ fn setup(
         ..default()
     });
 }
-
-impl Plugin for HelloGnoemPlugin {
-    fn build(&self, app: &mut App) {
-        app.add_systems(Startup, add_gnoems)
-            .add_systems(Update, greet_gnoems);
-    }
-}
-
-fn add_gnoems(mut commands: Commands) {
-    commands.spawn((Gnoem, Name("Willy".to_string())));
-    commands.spawn((Gnoem, Name("Kaulana".to_string())));
-    commands.spawn((Gnoem, Name("Buhle".to_string())));
-}
-
-fn greet_gnoems(query: Query<&Name, With<Gnoem>>) {
-    for name in &query {
-        println!("Hello {}!", name.0);
-    }
-}
-
-#[derive(Component)]
-struct Gnoem;
-
-#[derive(Component)]
-struct Name(String);
