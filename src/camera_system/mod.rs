@@ -10,6 +10,6 @@ impl PluginGroup for CameraSystemPlugins {
     }
 }
 
-pub(crate) fn get_plugins() -> PluginGroupBuilder {
+pub(crate) fn build_plugins() -> PluginGroupBuilder {
     CameraSystemPlugins::build(CameraSystemPlugins)
 }

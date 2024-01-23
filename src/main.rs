@@ -10,7 +10,7 @@ fn main() {
         .add_plugins((
             DefaultPlugins,
             HelloGnoemPlugin,
-            camera_system::get_plugins(),
+            camera_system::build_plugins(),
         ))
         .add_systems(Startup, setup)
         .run();
