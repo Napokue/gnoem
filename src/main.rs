@@ -2,10 +2,12 @@ mod camera_system;
 
 use bevy::prelude::*;
 use bevy::render::camera::ScalingMode;
+use bevy_rapier3d::plugin::{NoUserData, RapierPhysicsPlugin};
 
 fn main() {
     App::new()
         .add_plugins((DefaultPlugins, camera_system::build_plugins()))
+        .add_plugins(RapierPhysicsPlugin::<NoUserData>::default())
         .add_systems(Startup, setup)
         .run();
 }
