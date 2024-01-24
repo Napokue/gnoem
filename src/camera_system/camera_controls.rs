@@ -42,7 +42,7 @@ fn zoom_camera(
         if let Ok(mut projection) = query.get_single_mut() {
             if let Projection::Orthographic(ref mut orthographic) = *projection {
                 orthographic.scale -= mouse_wheel.y * 0.1;
-                orthographic.scale = orthographic.scale.clamp(0.5, 10.);
+                orthographic.scale = orthographic.scale.clamp(1., 5.);
             }
         }
     }
