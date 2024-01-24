@@ -1,12 +1,14 @@
 mod camera_system;
+mod gnoem;
 
 use bevy::prelude::*;
 use bevy::render::camera::ScalingMode;
 use bevy_rapier3d::prelude::*;
+use gnoem::GnoemPlugin;
 
 fn main() {
     App::new()
-        .add_plugins((DefaultPlugins, camera_system::build_plugins()))
+        .add_plugins((DefaultPlugins, camera_system::build_plugins(), GnoemPlugin))
         .add_plugins(RapierPhysicsPlugin::<NoUserData>::default())
         .add_systems(Startup, setup)
         .run();
@@ -28,17 +30,6 @@ fn setup(
             ..Default::default()
         })
         .insert(Collider::cuboid(50.0, 0.1, 50.0));
-
-    // cube
-    commands
-        .spawn(PbrBundle {
-            mesh: meshes.add(Mesh::from(shape::Cube { size: 1.0 })),
-            material: materials.add(Color::rgb_u8(124, 144, 255).into()),
-            transform: Transform::from_xyz(0.0, 5., 0.0),
-            ..default()
-        })
-        .insert(RigidBody::Dynamic)
-        .insert(Collider::cuboid(0.5, 0.5, 0.5));
 
     // light
     commands.spawn(PointLightBundle {
