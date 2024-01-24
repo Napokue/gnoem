@@ -1,7 +1,6 @@
 mod camera_system;
 
 use bevy::prelude::*;
-use bevy::prelude::*;
 use bevy::render::camera::ScalingMode;
 use bevy_rapier3d::prelude::*;
 
