@@ -44,7 +44,7 @@ fn setup(
     // camera_system
     commands.spawn(Camera3dBundle {
         projection: OrthographicProjection {
-            scale: 3.0,
+            scale: 5.,
             scaling_mode: ScalingMode::FixedVertical(2.),
             ..default()
         }

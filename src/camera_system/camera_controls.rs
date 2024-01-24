@@ -41,8 +41,8 @@ fn zoom_camera(
     for mouse_wheel in mouse_wheel_events.read() {
         if let Ok(mut projection) = query.get_single_mut() {
             if let Projection::Orthographic(ref mut orthographic) = *projection {
-                orthographic.scale -= mouse_wheel.y * 0.1;
-                orthographic.scale = orthographic.scale.clamp(1., 5.);
+                orthographic.scale -= mouse_wheel.y * 0.2;
+                orthographic.scale = orthographic.scale.clamp(3., 5.);
             }
         }
     }
